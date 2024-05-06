@@ -16,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $message = 'dynamic message from route';
     return view('home', compact('message'));
-});
+})->name('home');
+
+Route::get('/bonus-page', function () {
+    $data = [
+        'title' => 'bonus page',
+        'homeUrl' => route('home'),
+    ];
+    return view('bonus-page', $data);
+})->name('bonus-page');

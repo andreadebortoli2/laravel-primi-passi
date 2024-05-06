@@ -8,8 +8,20 @@
 </head>
 
 <body>
-    <h1>Hello World</h1>
-    <p>{{$message}}</p>
+    <header>
+        <ul>
+            <li>
+                Home
+            </li>
+            <li>
+                <a href="{{route('bonus-page')}}">bonus-page</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <h1>Hello World</h1>
+        <p>{{$message}}</p>
+    </main>
 </body>
 
 </html>
