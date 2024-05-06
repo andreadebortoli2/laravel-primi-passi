@@ -18,10 +18,11 @@ Route::get('/', function () {
     return view('home', compact('message'));
 })->name('home');
 
-Route::get('/bonus-page', function () {
+Route::get('/bonus-page{id}', function ($id) {
     $data = [
-        'title' => 'bonus page',
+        'title' => 'bonus page ' . $id,
         'homeUrl' => route('home'),
+        'id' => $id,
     ];
-    return view('bonus-page', $data);
+    return view('bonus-page-' . $id, $data);
 })->name('bonus-page');

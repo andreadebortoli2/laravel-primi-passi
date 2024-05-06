@@ -15,9 +15,19 @@
                     Home
                 </a>
             </li>
+            @foreach ($ns=[1,2] as $n)
+            @if($n != $id)
             <li>
-                Bonus-page
+                <a href="{{route('bonus-page', ['id' => $n])}}">
+                    Bonus-page {{$n}}
+                </a>
             </li>
+            @else
+            <li>
+                Bonus-page {{$n}}
+            </li>
+            @endif
+            @endforeach
         </ul>
     </header>
 

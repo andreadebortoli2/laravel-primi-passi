@@ -14,7 +14,10 @@
                 Home
             </li>
             <li>
-                <a href="{{route('bonus-page')}}">bonus-page</a>
+                <a href="{{route('bonus-page', ['id' => 1])}}">bonus-page-1</a>
+            </li>
+            <li>
+                <a href="{{route('bonus-page', ['id' => 2])}}">bonus-page-2</a>
             </li>
         </ul>
     </header>
